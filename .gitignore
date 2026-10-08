@@ -1,0 +1,9 @@
+node_modules/
+dist/
+# Downloaded/copied binaries: see `npm run fetch-model` and `npm run copy-wasm`.
+public/mediapipe/
+public/models/
+*.local
+.DS_Store
+*.zip
+.vercel

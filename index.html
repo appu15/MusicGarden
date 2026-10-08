@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1026" />
+    <title>Music Garden</title>
+  </head>
+  <body>
+    <main id="app" data-camera="idle" data-hands="idle">
+      <canvas id="garden" aria-label="A garden of flowers that follow your fingertips"></canvas>
+      <p class="hand-status" role="status" data-hand-status="idle"></p>
+      <p class="hint">
+        Raise your hands · touch a fingertip to your thumb to play its note and plant its flower
+        <span>N instrument · K scale · V camera · M mute · C clear · S save picture</span>
+      </p>
+      <p class="toast" role="status" data-toast></p>
+      <p class="caption">Look at this beautiful garden you have made.</p>
+      <!-- Kept in the DOM at 1x1 (not display:none) so browsers keep decoding frames. -->
+      <video id="camera" playsinline muted aria-hidden="true"></video>
+
+      <section class="panel" aria-live="polite">
+        <h1>A garden you play by hand.</h1>
+        <p>
+          Each fingertip carries a flower with its own note. Touch a finger to your thumb to play it
+          and plant it. Your video stays on this device.
+        </p>
+        <button type="button" data-start>Start the garden</button>
+        <p class="error" role="alert" data-error hidden></p>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
